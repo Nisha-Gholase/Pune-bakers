@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pune Bakers</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Top Navbar */
+    .top-navbar {
+      display: flex;
+      justify-content: space-between;
+      background-color: #333;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    .top-navbar a {
+      color: white;
+      text-decoration: none;
+      margin-right: 15px;
+      font-size: 14px;
+    }
+
+    .top-navbar .top-left a:hover,
+    .top-navbar .top-right a:hover {
+      text-decoration: underline;
+    }
+
+    /* Second Navbar */
+    .pune-navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff5f5;
+      padding: 15px 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-left, .nav-center, .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-left i,
+    .nav-right i {
+      font-size: 18px;
+      margin-right: 12px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .nav-left .logo {
+      font-weight: bold;
+      font-size: 22px;
+      color: #d94b4b;
+    }
+
+    .nav-center {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-center a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 12px;
+      font-size: 16px;
+    }
+
+    .pune-bakers {
+      font-family: 'Great Vibes', cursive;
+      font-size: 24px;
+      color: #a03e3e;
+      margin: 0 20px;
+    }
+
+    .nav-center a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url(./pune/main2.png);
+      background-size: cover;
+      background-position: center;
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      text-shadow: 1px 1px 5px black;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    /* Gallery Section */
+    .gallery {
+      padding: 40px 20px;
+      background-color: #fff9f9;
+    }
+
+    .gallery h2 {
+      text-align: center;
+      color: #a03e3e;
+      margin-bottom: 30px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+    
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .view-all-btn {
+      background-color: lightcoral;
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .view-all-btn:hover {
+      background-color: blueviolet;
+    }
+    
+    .container {
+      padding: 40px 20px;
+      background-color: #fff9f9;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    .price {
+      color: lightcoral;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 280px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      margin: 10px 0 8px;
+      color: #333;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .order-btn {
+      background-color: lightpink;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .order-btn:hover {
+      background-color: purple;
+      
+    }
+
+    /* Footer */
+    .footer {
+      background-color: black;
+      color: #f1f1f1;
+      padding: 40px 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-column {
+      flex: 1 1 200px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 15px;
+      color: #f9a825; /* Puneri yellow-orange */
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #aaa;
+      border-top: 1px solid #444;
+      padding-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .pune-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-center {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <div class="top-navbar">
+    <div class="top-left">
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="top-right">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+
+  <!-- Second Navbar -->
+  <div class="pune-navbar">
+    <div class="nav-left">
+      <i class="fas fa-search"></i>
+      
+    </div>
+    <div class="nav-center">
+      <a href="#">Home</a>
+      <a href="#">Birthday</a>
+      <a href="#">Occasions</a>
+      <span class="pune-bakers">Pune Bakers</span>
+      <a href="#">Best Sellers</a>
+      <a href="#">Bakery</a>
+      <a href="#">Chocolate</a>
+    </div>
+    <div class="nav-right">
+      <i class="fas fa-phone"></i>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div >
+      <h>Welcome to Pune Bakers</h>
+      <p>All Bakery Product by</p>
+    </div>
+  </section>
+
+  <!--Information-->
+  <section class="info">
+    <h1 style="text-align: center; font-family: 'Times New Roman', Times, serif; ;">Online Cakes Delivery in Pune</h1>
+    <p style="text-align: center;">Our healthy <b>cakes delivery to Pune</b> are freshly baked exclusively in our award-winning Pune bakery and each of these cakes are delicious baked to <b>send online in Pune</b> and can be delivered same day, Midnight delivery or overnight <b>cake delivery in Pune</b> city. Are you looking for the best dessert to serve during a party? Then our gourmet cakes can be the best option for Pune. You can serve them during birthdays, anniversaries, and other special occasions.</p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <h2>Shop by category</h2>
+    <div class="gallery-grid">
+      <img src="./pune/img1.jpg ">
+      <img src="./pune/img2.jpg">
+      <img src="./pune/img3.jpg">
+      <img src="./pune/img4.jpg">
+    </div>
+  </section>
+
+  <!--Cards-->
+  <section class="card">
+    <h1 style="text-align: center;">Featured collection</h1>
+    <div class="button-container">
+    <button class="view-all-btn">View All</button>
+  </div>
+
+   <div class="container">
+    <div class="card">
+      <img src="./pune/img1.jpg">
+      <div class="card-content">
+        <h3>Chocolate Cake</h3>
+        <div class="price">650</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./pune/img2.jpg">
+      <div class="card-content">
+        <h3>Vanilla Cake</h3>
+        <div class="price">700</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./pune/img3.jpg">
+      <div class="card-content">
+        <h3>Red Velvet</h3>
+        <div class="price">500</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./pune/img4.jpg">
+      <div class="card-content">
+        <h3>Black Forest</h3>
+        <div class="price">750</div>
+      </div>
+</div>
+    </div>
+  </section>
+
+  <!--Paragraph-->
+  <section class="graph">
+    <h1 style="text-align: center; font-family: 'Times New Roman', Times, serif;">Gourmet & Birthday Cakes Delivery in Pune for Every Occasion</h1>
+    <p><b>Send a Birthday Cake</b> - Celebrate with a delicious birthday cake delivery for Same Day & Midnight Cake Delivery in Pune! Pune Bakers offers cakes for delivery all over the Pune city. Order with the best birthday cake delivery in Pune site online - we guarantee your gift will be on time and taste deliciously!</p>
+  </section>
+
+  <!--Main Information-->
+  <section class="main">
+    <h1 style="font-family: 'Times New Roman', Times, serif;">Send Cakes Online in Pune</h1>
+    <p>In addition to shipping or <b>sending cakes</b> we also offer our Operation: Best Wishes Cake program, through which we can deliver to deployed Indian Military service members anywhere in the Pune, all year round! On our online cake shop, there are many types of gourmet cakes that you can try. These cakes compliment any occasion like mothers day cakes in Pune, birthdays, anniversaries, bridal showers, and other special events. The quality of all our cakes is first-rate. You just need to spend your little time in finding the perfect cake delivery as per the taste and interest of your recipients. And with every order, you place Online, you can <b>send cakes to Pune</b> with a free personalized card message written on it to let them know you are thinking about them on their special day.</p>
+  </section>
+
+  <!--Big Paragraph-->
+  <section class="big">
+    <h1 style="text-align: center; font-family: 'Times New Roman', Times, serif;">Promt & On time Midnight Cake Delivery in Pune</h1>
+    <p>We also accept same day Midnight cake delivery orders online until 6:00 pm IST Monday through Saturday and gift orders can be placed up to 6 months in advance of today's date. Order now for the same day or midnight cake delivery! Fresh baked cakes are also available throughout the city area– please inquire for a potential quote.
+      <br><br>
+
+Our expert delivery guys deliver cakes to any part of Pune city and its surroundings. These are the few important places which we cover: Ghorpadi, Ghorpuri, Kondhwa Khurd, AFMC College, Akurdi, Alandi Road, Anand Nagar, Anand Park Apte Road, Aundh, Azad Nagar, Balaji Nagar, Balewadi, Baner, Bavdhan, Bhandarkar Road Bhavani Peth, Bhosale Nagar, Bhosari, Bibvewadi, Budhwar Peth, Chandan Nagar, Chandni Chowk, Chinchwad Dhanori, Dhayari, Fatima Nagar, Ganesh Peth, Gokhale Nagar, Guruwar Peth, Hadapsar, Hari Nagar Hinjewadi, Indira Nagar, Jagtap Dairy, Jangali Maharaj Road, Janwadi, Jatap Chowk, Kalas, Kalewadi Kalyani Nagar, Karve Nagar, Kasarwadi, Kasba Peth, Katraj, Keshav Nagar, Khadki, Kothrud Lohegaon, Maharshi Nagar, Mandai, Mangal Das Road, Mangalwar Peth, Manjri, Mann, MG Road Mhaslke Vasti, MIT College, Model Colony, Mohammadwadi, Mohan Nagar, Mukund Nagar, Mundhwa, Nagpur Chawl Nana Peth, Narayan Peth, Navi Peth, Nigdi, Null Stop, Panchvati, Parvati, Pashan Paud Road, Phugewadi, Phursungi, Pimple Gurav, Pingale Vasti, Pradhikaran, Ramwadi, Raviwar Peth Revenue Colony, Sadashiv Peth, Sade Satra Nali, Sahipar, Sahkar Nagar -1, Sahkar Nagar – 2, Sakore Nagar, Salisbury Park Sanewadi, Sangawadi, Sangvi, Sanjay Park, Sant Patrik Town, Sant Tukaram Nagar, Sasoon Road, Saswad Road Satara Road, Senapati Bapat Road, Seven Love Chowk, Shanewadi, Shaniwar Peth, Shaniwarwada, Shankar Shet Road, Shastri Nagar Shiv Tirth Nagar, Shivaji Nagar, Shukrawar Peth, Sinhagarh, Solapur, Somwar Peth, Spicer College, Subhash Nagar Swargate, Tadiwala, Talawade, Tathwade, Tenajiwadi, Thergaon, Tilak Road, Tingre Nagar Turf Club, Undri, University, Vadgaonsheri, Vidya Nagar, Vikas Nagar, Viman Nagar, Vishrantwadi Wadgaon Budruk, Wagholi, Wakad, Wakdewadi, Wanowrie, Wanwadi, Warje, Yerwada
+
+
+Birthday Cakes
+PuneBakers offers hassle free same day cakes deliveries for your birthday celebrations.
+
+
+Delicious Chocolates
+Our finest bakery will prepare fresh baked cakes for your occasion without any delay.
+
+</p>
+  </section>
+  
+  <!--Three Cards-->
+  <section class="three">
+    <h1 style="text-align: center; font-family: 'Times New Roman', Times, serif;">Our Best Flavour</h1>
+    <div class="container">
+    <div class="card">
+      <img src="./pune/choklate.jpg">
+      <div class="card-content">
+        <h3>Chocolate Cake</h3>
+        <p><b>Rich and moist chocolate layers with creamy frosting. A chocoholic’s dream!</b></p>
+        <button class="order-btn">Order Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./pune/vanila.jpg">
+      <div class="card-content">
+        <h3>Vanilla Cake</h3>
+        <p><b>Classic and fluffy vanilla cake topped with light whipped cream.</b></p>
+        <button class="order-btn">Order Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./pune/red.jpg">
+      <div class="card-content">
+        <h3>Red Velvet Cake</h3>
+        <p><b>Elegant red velvet layers with rich cream cheese frosting for a sweet finish.</b></p>
+        <button class="order-btn">Order Now</button>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>We are a proud Puneri bakery bringing authentic flavors and traditional taste to your table. Made in Pune with love!</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Return Policy</a></li>
+          <li><a href="#">Terms Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+           <li><a href="#">Cakes for Kids</a></li>
+            <li><a href="#">Cakes Making Guide</a></li>
+             <li><a href="#">How to order Cakes Online</a></li>
+              <li><a href="#">Mothers Day Celibrations With Cake!</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Email: hello@puneribakery.in</li>
+          <li>Phone: +91 98765 43210</li>
+          <li>Location: FC Road, Pune, India</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Puneri Bakery | Made with ❤️ in Pune 🇮🇳
+    </div>
+  </footer>
+
+</body>
+</html>
